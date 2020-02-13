@@ -1,0 +1,4 @@
+cmake-build-debug/
+file.txt
+.DS_Store
+.idea/
