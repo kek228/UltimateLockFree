@@ -3,4 +3,4 @@ project(UltimateLockFree)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(UltimateLockFree main.cpp)
+add_executable(SeqCst MemoryModels/SeqCst.cpp)
