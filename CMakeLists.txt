@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(SeqCst MemoryModels/SeqCst.cpp)
 add_executable(Relexed MemoryModels/Relexed.cpp)
+add_executable(AcqRel MemoryModels/AcqRel.cpp)
 
