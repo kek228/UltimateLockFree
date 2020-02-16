@@ -9,4 +9,5 @@ add_executable(AcqRel MemoryModels/AcqRel.cpp)
 add_executable(ReleaseSequence MemoryModels/ReleaseSequence.cpp)
 
 add_executable(V1_Stack LockFreeStack/V1_Stack.cpp)
+add_executable(V2_Stack LockFreeStack/V2_Stack.cpp)
 
