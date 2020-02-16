@@ -8,3 +8,5 @@ add_executable(Relexed MemoryModels/Relexed.cpp)
 add_executable(AcqRel MemoryModels/AcqRel.cpp)
 add_executable(ReleaseSequence MemoryModels/ReleaseSequence.cpp)
 
+add_executable(V1_Stack LockFreeStack/V1_Stack.cpp)
+

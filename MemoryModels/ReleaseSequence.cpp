@@ -80,7 +80,7 @@ void producerConsumers(){
             if(stop.load(memory_order_relaxed))
                 break;
             //cout<<"TREAD: "<<id<<" dataIndex=="<<dataIndex<<endl;
-            //cout<<id<<' '<<dataIndex<<endl;
+            cout<<id<<' '<<dataIndex<<endl;
             int num = data[dataIndex];
             //cout<<"TREAD: "<<id<<" num=="<<num<<endl;
 
@@ -101,10 +101,5 @@ void producerConsumers(){
 
 
 int main(){
-    int c = 0;
-    while(true){
-        cout<<"ITERATION=="<<c<<endl;
-        producerConsumers();
-        ++c;
-    }
+    producerConsumers();
 }
