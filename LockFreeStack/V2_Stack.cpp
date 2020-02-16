@@ -48,11 +48,11 @@ namespace v2 {
         // Голова списка удаления
         atomic<node *> to_be_deleted{nullptr};
 
-        static void delete_nodes(node *nodes) {
-            while (nodes) {
-                node *next = nodes->next;
-                delete nodes;
-                nodes = next;
+        static void delete_nodes(node *curnode) {
+            while (curnode) {
+                node *next = curnode->next;
+                delete curnode;
+                curnode = next;
             }
         }
 
@@ -71,7 +71,8 @@ namespace v2 {
                 // Голову можно спокойно удалять, новый поток УЖЕ получит другое значение головы
                 delete old_head; //                                                                   (7)
             } else {
-                chain_pending_node(old_head);//                                                       (8)
+                if(old_head)
+                    chain_pending_node(old_head);//                                                   (8)
                 --threadsInPop;
             }
         }
